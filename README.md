@@ -32,14 +32,19 @@ This is a simple To-Do List application that demonstrates the fundamental concep
 - **GET Request:** When the page loads, the frontend sends a `GET` request to the backend to retrieve the current list of tasks from the server.
 - **POST Request:** Whenever a task is added, deleted, or reordered, the frontend sends a `POST` request to update the tasks on the server. The updated list is then saved to the `tasks.txt` file.
 
-## Getting Started
-
 ### Installation
-
-1. **Clone the repository:**
+1. **Clone the repository and navigate to directory:**
    ```bash
    git clone https://github.com/your-username/todo-list-app.git
    cd todo-list-app 
+
+## Method 1:
+2. **Set up and run the application by executing the setup.sh script**
+```bash
+chmod +x setup.sh
+./setup.sh
+
+## Method 2:
 2. **Navigate to the frontend directory, install dependencies, start frontend server:**
    ```bash
    cd todo-frontend
