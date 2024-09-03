@@ -1,0 +1,85 @@
+body {
+  background-color: #DCD6F7; /* Periwinkle */
+}
+
+.to-do-list {
+  font-family: monospace;
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 4rem;
+  color: #4E4C67; /* English Violet */
+}
+
+button {
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5 ease;
+}
+
+.add-button {
+  background-color: #A6B1E1; /* Periwinkle */
+}
+
+.add-button:hover {
+  background-color: rgba(166, 177, 225, 0.652);
+}
+
+.delete-button {
+  background-color: #B4869F; /* Puce */
+}
+
+.delete-button:hover {
+  background-color: rgba(180, 134, 159, 0.652);
+}
+
+.move-button {
+  background-color: #985F6F; /* China Rose */
+}
+
+.move-button:hover {
+  background-color: rgba(152, 95, 111, 0.652);
+}
+
+input[type="text"] {
+  font-size: 1.6rem;
+  padding: 10px;
+  border: 2px solid hsl(0, 0%, 80%, 0.5);
+  border-radius: 5px;
+  color: #4E4C67; /* English Violet */
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #A6B1E1; /* Periwinkle */
+  margin-bottom: 10px;
+  border: 3px solid #4E4C67; /* English Violet */
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+
+.delete-button, .move-button {
+  padding: 8px 12px;
+  font-size: 1.4rem;
+  margin-left: 10px;
+}
