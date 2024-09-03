@@ -18,7 +18,6 @@ export default function ToDoList() {
     }, []);
 
     useEffect(() => {
-        if (tasks.length > 0) { // Ensure tasks is not empty before making the POST request
             fetch('http://localhost:3000/api/task', {
                 method: 'POST',
                 headers: {
@@ -29,7 +28,6 @@ export default function ToDoList() {
             .then(response => response.json())
             .then(data => console.log("Tasks saved:", data))
             .catch(err => console.error("Error saving tasks:", err));
-        }
     }, [tasks]);
 
         
