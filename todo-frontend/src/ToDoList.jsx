@@ -1,10 +1,38 @@
 
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ToDoList() {
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState("");
+
+
+    useEffect(() => {
+        fetch("http://localhost:3000/api/task")
+            .then(response => response.json()) // Parse the JSON from the response
+            .then(data => {
+                console.log('Fetched data:', data); // Log the data to see its structure
+                setTasks(data); // Access the 'users' array from the data object
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
+
+    useEffect(() => {
+        if (tasks.length > 0) { // Ensure tasks is not empty before making the POST request
+            fetch('http://localhost:3000/api/task', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(tasks), // Convert tasks to JSON string
+            })
+            .then(response => response.json())
+            .then(data => console.log("Tasks saved:", data))
+            .catch(err => console.error("Error saving tasks:", err));
+        }
+    }, [tasks]);
+
+        
     function handleInputChange(event){
         setNewTask(event.target.value)
     }
@@ -40,7 +68,7 @@ export default function ToDoList() {
     
     return (
         <div className="to-do-list">
-            <h1>To-Do-List</h1>
+            <h1>To-Do List</h1>
             <div>
                 <input
                     type="text"
@@ -52,7 +80,7 @@ export default function ToDoList() {
                 </button>
             </div>
             <ul>
-                {tasks.map((task, index) => 
+                {tasks.map((task, index) =>
                     <li key={index}>
                         <span className="text">{task}</span>
                         <button
@@ -70,14 +98,13 @@ export default function ToDoList() {
                             onClick={() => moveTaskDown(index)}>
                             Down
                         </button>
-
                     </li>
                 )}
             </ul>
-
         </div>
-    )
+    );
 }
+
 
 /**
  * NOTES:
