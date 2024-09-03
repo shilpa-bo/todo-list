@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Navigate to the project directory
-cd todo-list
-
 # Navigate to frontend, install dependencies, start server
 cd todo-frontend
 npm install
