@@ -1,4 +1,4 @@
-# Simple To-Do List App
+# To-Do List App
 
 ## Overview
 
@@ -33,24 +33,24 @@ This is a simple To-Do List application that demonstrates the fundamental concep
 - **POST Request:** Whenever a task is added, deleted, or reordered, the frontend sends a `POST` request to update the tasks on the server. The updated list is then saved to the `tasks.txt` file.
 
 ### Installation
-1. **Clone the repository and navigate to directory:**
+- **Clone the repository and navigate to directory:**
    ```bash
-   git clone https://github.com/your-username/todo-list-app.git
-   cd todo-list-app 
+  git clone https://github.com/your-username/todo-list-app.git
+  cd todo-list-app
 
 ## Method 1:
-2. **Set up and run the application by executing the setup.sh script**
-```bash
-chmod +x setup.sh
-./setup.sh
+- **Set up and run the application by executing the setup.sh script**
+  ```bash
+  chmod +x setup.sh
+  ./setup.sh
 
 ## Method 2:
-2. **Navigate to the frontend directory, install dependencies, start frontend server:**
+- **Navigate to the frontend directory, install dependencies, start frontend server:**
    ```bash
    cd todo-frontend
    npm install
    npm run dev
-3. **Navigate to the backend directory, install dependencies, create database file, start backend server:**
+- **Navigate to the backend directory, install dependencies, create database file, start backend server:**
    ```bash
    cd todo-backend
    npm install
